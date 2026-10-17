@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163b2c">
+  <meta name="description" content="FLORACYCLE — a student research workspace for low-cost agricultural-waste biodegradable carry bags.">
+  <title>FLORACYCLE — Research Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="FLORACYCLE home" data-nav="overview">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 33V17"/><path d="M20 22C8 22 7 12 8 7c9 0 15 5 12 15Z"/><path d="M20 27c12 0 14-9 13-15-9 0-15 5-13 15Z"/><path d="M13 30c2 2 4 3 7 3"/></svg></span>
+        <span><strong>FLORACYCLE</strong><small>RESEARCH LAB</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-nav="overview">Overview</button>
+        <button class="nav-link" data-nav="research">Research library</button>
+        <button class="nav-link" data-nav="ideas">Idea workshop</button>
+        <button class="nav-link" data-nav="experiments">Experiments</button>
+        <button class="nav-link" data-nav="sources">Sources</button>
+      </nav>
+      <div class="top-actions">
+        <button class="button button-quiet" id="exportBtn" title="Download a backup of this workspace">↧ Backup</button>
+        <a class="button button-dark" href="https://github.com/new?name=floracycle-research-lab" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main class="page-wrap">
+      <section class="page-view active" id="view-overview" data-view="overview">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="pulse-dot"></span> STUDENT RESEARCH WORKSPACE</div>
+            <h1>Turn agricultural waste into <em>better materials.</em></h1>
+            <p class="hero-sub">A living notebook for your biodegradable carry-bag research: collect papers, develop ideas, record experiments, and document what the evidence actually shows.</p>
+            <div class="hero-buttons">
+              <button class="button button-lime" data-add="idea">＋ Add an idea</button>
+              <button class="button button-outline-light" data-nav="research">Explore research <span>→</span></button>
+            </div>
+            <p class="hero-footnote"><span>FLORACYCLE IDP</span><span>•</span><span>Low-cost materials</span><span>•</span><span>Agricultural waste</span></p>
+          </div>
+          <div class="hero-art" aria-label="Decorative illustration of a leaf and circular material cycle" role="img">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="orbit-label label-top">WASTE</div><div class="orbit-label label-right">MATERIAL</div><div class="orbit-label label-bottom">TEST</div>
+            <svg viewBox="0 0 300 300" class="leaf-illustration" aria-hidden="true">
+              <circle cx="150" cy="150" r="104" fill="none" stroke="rgba(238,246,224,.27)" stroke-width="1.4" stroke-dasharray="3 8"/>
+              <path d="M150 242c-1-55-2-92-1-132" fill="none" stroke="#cfe5a5" stroke-width="4" stroke-linecap="round"/>
+              <path d="M149 185C100 184 61 147 72 82c54-2 93 34 77 103Z" fill="#b9d78d"/>
+              <path d="M151 142C152 86 189 46 242 54c5 51-29 92-91 88Z" fill="#e0efba"/>
+              <path d="M149 182C184 174 211 195 211 229c-32 10-58-9-62-39Z" fill="#709c62"/>
+              <path d="M149 177 95 105M153 137 220 73M151 200l43 21" stroke="#426e4b" stroke-width="2.3" stroke-linecap="round" fill="none"/>
+              <circle cx="150" cy="150" r="7" fill="#f2f4d8"/>
+            </svg>
+            <div class="art-caption"><span class="mini-sprout">✳</span><span><strong>Research → Test → Learn</strong><small>Every idea starts with evidence.</small></span></div>
+          </div>
+        </div>
+
+        <section class="visual-showcase" aria-label="FLORACYCLE visual showcase">
+          <div class="showcase-heading">
+            <div><div class="eyebrow eyebrow-green">THE MATERIAL JOURNEY</div><h2>From farm waste to a greener future</h2><p class="section-lead">Explore the ideas behind FLORACYCLE through an animated 3D image carousel.</p></div>
+            <div class="showcase-controls"><button type="button" class="showcase-arrow" id="slidePrev" aria-label="Previous slide">←</button><button type="button" class="showcase-arrow" id="slideNext" aria-label="Next slide">→</button></div>
+          </div>
+          <div class="carousel-stage" id="carouselStage" tabindex="0" aria-label="3D image slides. Use left and right arrow keys to navigate.">
+            <article class="showcase-slide slide-one" data-slide="0"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1100&q=85" alt="Green agricultural fields" loading="lazy"><div class="slide-shade"></div><div class="slide-copy"><span>01 · SOURCE</span><h3>Agricultural waste</h3><p>Look at locally available by-products that could become useful raw materials.</p></div></article>
+            <article class="showcase-slide slide-two" data-slide="1"><img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1100&q=85" alt="Natural plant fibres and materials" loading="lazy"><div class="slide-shade"></div><div class="slide-copy"><span>02 · MATERIALS</span><h3>Nature-inspired materials</h3><p>Investigate starch and plant fibres as ingredients for experimental films.</p></div></article>
+            <article class="showcase-slide slide-three" data-slide="2"><img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1100&q=85" alt="Materials being sorted for reuse" loading="lazy"><div class="slide-shade"></div><div class="slide-copy"><span>03 · CIRCULARITY</span><h3>Waste into value</h3><p>Design around reuse, responsible sourcing, and reduced waste.</p></div></article>
+            <article class="showcase-slide slide-four" data-slide="3"><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1100&q=85" alt="Fresh green leaves" loading="lazy"><div class="slide-shade"></div><div class="slide-copy"><span>04 · IMPROVE</span><h3>Test, learn, improve</h3><p>Measure the prototype and report results honestly before making performance claims.</p></div></article>
+          </div>
+          <div class="showcase-footer"><div class="slide-dots" id="slideDots" aria-label="Choose a slide"><button class="slide-dot active" data-go-slide="0" aria-label="Show slide 1"></button><button class="slide-dot" data-go-slide="1" aria-label="Show slide 2"></button><button class="slide-dot" data-go-slide="2" aria-label="Show slide 3"></button><button class="slide-dot" data-go-slide="3" aria-label="Show slide 4"></button></div><span>Images may require an internet connection.</span></div>
+        </section>
+
+        <div class="stats-grid" aria-label="Workspace totals">
+          <article class="stat-card"><span class="stat-icon">▤</span><div><span class="stat-label">Research entries</span><strong id="statResearch">4</strong><small>Saved references & notes</small></div></article>
+          <article class="stat-card"><span class="stat-icon icon-mint">✳</span><div><span class="stat-label">Ideas in the lab</span><strong id="statIdeas">3</strong><small>Hypotheses to explore</small></div></article>
+          <article class="stat-card"><span class="stat-icon icon-peach">⌁</span><div><span class="stat-label">Experiments logged</span><strong id="statExperiments">0</strong><small>Results you can revisit</small></div></article>
+          <article class="stat-card"><span class="stat-icon icon-lilac">◎</span><div><span class="stat-label">Ideas implemented</span><strong id="statImplemented">0</strong><small>Status tracked by you</small></div></article>
+        </div>
+
+        <div class="section-heading row-heading"><div><div class="eyebrow eyebrow-green">YOUR PROJECT</div><h2>From research to prototype</h2><p class="section-lead">A practical path from reading to tested evidence. Move at your own pace and record every change.</p></div><button class="text-button" data-nav="ideas">Open idea workshop →</button></div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number">01</span><span class="step-symbol">⌕</span><h3>Read & compare</h3><p>Study published work, record the ingredients and tests, and note what the paper does not answer.</p><span class="step-tag">RESEARCH</span></article>
+          <article class="step-card"><span class="step-number">02</span><span class="step-symbol">✳</span><h3>Form a hypothesis</h3><p>Choose a local agricultural by-product and explain what you expect it to change in the material.</p><span class="step-tag">IDEAS</span></article>
+          <article class="step-card"><span class="step-number">03</span><span class="step-symbol">⌁</span><h3>Test & record</h3><p>Compare a control with trial formulations, record repeatable measurements, and keep limitations visible.</p><span class="step-tag">EXPERIMENTS</span></article>
+          <article class="step-card"><span class="step-number">04</span><span class="step-symbol">↗</span><h3>Improve the design</h3><p>Use results to revise the formula, estimate cost, and document what is ready for the next review.</p><span class="step-tag">ITERATION</span></article>
+        </div>
+
+        <div class="bottom-panels">
+          <article class="panel focus-panel"><div class="panel-top"><div><div class="eyebrow eyebrow-green">CURRENT FOCUS</div><h2>Low-cost carry bags</h2></div><span class="focus-badge">IDP PROJECT</span></div><p>Explore a starch-based film reinforced with agricultural-waste cellulose, such as rice straw. First compare with a starch-only control; the best formulation must be found through testing, not assumed.</p><div class="focus-tags"><span>Rice straw</span><span>Starch matrix</span><span>Strength + water uptake</span><span>Material cost</span></div><button class="text-button" data-nav="ideas">View project ideas →</button></article>
+          <article class="panel quick-panel"><div class="eyebrow eyebrow-green">QUICK ACTIONS</div><h2>Keep the lab moving</h2><button class="quick-action" data-add="research"><span class="quick-icon">＋</span><span><strong>Add a research paper</strong><small>Save a URL, summary, and notes</small></span><b>→</b></button><button class="quick-action" data-add="idea"><span class="quick-icon quick-icon-green">✳</span><span><strong>Capture a new idea</strong><small>Write a hypothesis and next step</small></span><b>→</b></button><button class="quick-action" data-add="experiment"><span class="quick-icon quick-icon-peach">⌁</span><span><strong>Log an experiment</strong><small>Record a method and observations</small></span><b>→</b></button></article>
+        </div>
+        <div class="data-note"><span>ⓘ</span><p><strong>Your workspace, your records.</strong> This version saves changes in this browser on this device. Use <b>Backup</b> to download a JSON file before clearing browser data or moving devices.</p><button id="importShortcut" class="text-button">Restore backup ↗</button></div>
+      </section>
+
+      <section class="page-view" id="view-research" data-view="research">
+        <div class="page-title-row"><div><div class="eyebrow eyebrow-green">EVIDENCE LIBRARY</div><h1>Research library</h1><p class="section-lead">Collect papers, capture what they show, and keep your own interpretation separate from published results.</p></div><button class="button button-dark" data-add="research">＋ Add research</button></div>
+        <div class="toolbar"><label class="search-box"><span>⌕</span><input id="researchSearch" type="search" placeholder="Search title, material, notes…" aria-label="Search research"></label><select id="researchStatusFilter" aria-label="Filter by reading status"><option value="all">All reading statuses</option><option>To read</option><option>Reading</option><option>Reviewed</option><option>Needs verification</option></select><button class="button button-quiet" id="exportCsvBtn">Export CSV ↓</button></div>
+        <div class="results-meta"><span id="researchCount">4 references</span><span>Tip: store the DOI or publisher URL when possible.</span></div>
+        <div id="researchGrid" class="research-grid"></div>
+        <div class="empty-state hidden" id="researchEmpty"><span>⌕</span><h3>No matching papers</h3><p>Try a different search or add a new reference.</p><button class="button button-dark" data-add="research">＋ Add research</button></div>
+      </section>
+
+      <section class="page-view" id="view-ideas" data-view="ideas">
+        <div class="page-title-row"><div><div class="eyebrow eyebrow-green">HYPOTHESES & CONCEPTS</div><h1>Idea workshop</h1><p class="section-lead">Turn your own observations into testable hypotheses. Update stages as the work progresses.</p></div><button class="button button-dark" data-add="idea">＋ Add an idea</button></div>
+        <div class="idea-callout"><span class="callout-icon">✳</span><div><strong>A useful research gap is specific—not just “nobody has tried this.”</strong><p>For FLORACYCLE, investigate whether a simple local-waste formulation improves handling while keeping material cost reasonable and biodegradation measurable. Compare it against existing studies and update this claim as you read more.</p></div></div>
+        <div class="toolbar"><label class="search-box"><span>⌕</span><input id="ideaSearch" type="search" placeholder="Search your ideas…" aria-label="Search ideas"></label><select id="ideaStageFilter" aria-label="Filter ideas by stage"><option value="all">All stages</option><option>Proposed</option><option>Researching</option><option>Planning</option><option>Testing</option><option>Analyzing</option><option>Implemented</option><option>Paused</option></select></div>
+        <div id="ideasGrid" class="ideas-grid"></div>
+        <div class="empty-state hidden" id="ideasEmpty"><span>✳</span><h3>No matching ideas</h3><p>Add an idea or change the current filter.</p><button class="button button-dark" data-add="idea">＋ Add an idea</button></div>
+      </section>
+
+      <section class="page-view" id="view-experiments" data-view="experiments">
+        <div class="page-title-row"><div><div class="eyebrow eyebrow-green">METHODS & OBSERVATIONS</div><h1>Experiment log</h1><p class="section-lead">Record what you actually did, how you measured it, and what happened—including failed trials.</p></div><button class="button button-dark" data-add="experiment">＋ Log experiment</button></div>
+        <div class="experiment-reminder"><span>⚑</span><p><strong>Safety and evidence:</strong> do physical material preparation only with a supervisor and approved lab procedure. This log is not a substitute for a validated biodegradability or compostability test.</p></div>
+        <div class="experiment-table-wrap"><table class="experiment-table"><thead><tr><th>Experiment</th><th>Related idea</th><th>Date</th><th>Status</th><th>Notes</th><th></th></tr></thead><tbody id="experimentsBody"></tbody></table></div>
+        <div class="empty-state" id="experimentsEmpty"><span>⌁</span><h3>Your experiment log starts here</h3><p>Record a supervised trial, the control used, your method, and your results.</p><button class="button button-dark" data-add="experiment">＋ Log first experiment</button></div>
+        <div class="measurement-panel"><div><div class="eyebrow eyebrow-green">MEASUREMENT HELPERS</div><h2>Useful formulas</h2><p class="section-lead">Use consistent units and record raw measurements as well as calculated values.</p></div><div class="formula-grid"><article><small>WATER ABSORPTION</small><code>((wet mass − dry mass) ÷ dry mass) × 100</code><p>Report soak time and temperature too.</p></article><article><small>MASS LOSS</small><code>((initial mass − final mass) ÷ initial mass) × 100</code><p>Specify test conditions and blank/control.</p></article><article><small>ESTIMATED COST</small><code>total material cost ÷ usable bags</code><p>Include waste and rejected samples.</p></article></div></div>
+      </section>
+
+      <section class="page-view" id="view-sources" data-view="sources">
+        <div class="page-title-row"><div><div class="eyebrow eyebrow-green">START WITH TRUSTED EVIDENCE</div><h1>Sources & reading list</h1><p class="section-lead">Starter literature and official guidance relevant to starch-based films, agricultural residues, and biodegradable-plastic claims.</p></div><button class="button button-dark" data-add="research">＋ Save a source</button></div>
+        <div class="source-list">
+          <article class="source-item"><div class="source-kind">PEER-REVIEWED · 2022</div><h3>The effect of rice straw derived microfibrillated cellulose as a reinforcing agent in starch/PVA/PEG biocompatible films</h3><p>Research on rice-straw-derived cellulose as a reinforcing component in polymer films. Read the methods closely before deciding whether its ingredients are suitable for your low-cost project.</p><a href="https://doi.org/10.1016/j.matchemphys.2022.126652" target="_blank" rel="noopener">Open publisher page ↗</a></article>
+          <article class="source-item"><div class="source-kind">PEER-REVIEWED · 2023</div><h3>Antioxidant starch composite films containing rice straw extract and cellulose fibres</h3><p>Studies rice straw extract and cellulose fibres in thermoplastic starch films, including mechanical and barrier properties.</p><a href="https://doi.org/10.1016/j.foodchem.2022.134073" target="_blank" rel="noopener">Open publisher page ↗</a></article>
+          <article class="source-item"><div class="source-kind">OPEN ACCESS · 2025</div><h3>Biodegradable Film of Starch-Based Carboxymethyl Cellulose from Rice Husk and Straw for Application in Food Preservation</h3><p>Investigates rice husk and straw cellulose conversion and starch-based CMC films. Useful for comparing processing complexity and material properties.</p><a href="https://www.mdpi.com/2227-9717/13/5/1387" target="_blank" rel="noopener">Read full article ↗</a></article>
+          <article class="source-item"><div class="source-kind">OPEN ACCESS · 2023</div><h3>Development and characterization of starch-based bioactive thermoplastic packaging films derived from banana peels</h3><p>Uses banana-peel-derived starch and cellulose in films; a useful alternative agricultural-waste comparison, but not proof that a rice-straw carry bag will perform the same way.</p><a href="https://doi.org/10.1016/j.carpta.2023.100328" target="_blank" rel="noopener">Read article ↗</a></article>
+          <article class="source-item source-official"><div class="source-kind">OFFICIAL GUIDANCE · INDIA</div><h3>Central Pollution Control Board (CPCB)</h3><p>Check the latest official guidance and certification requirements before describing a product as certified biodegradable or compostable, or presenting it as commercially compliant.</p><a href="https://cpcb.nic.in/" target="_blank" rel="noopener">Open CPCB website ↗</a><a href="https://cpcb.nic.in/uploads/plasticwaste/Biodegrable%20Plastics_SOP.pdf" target="_blank" rel="noopener">Biodegradable-plastics certification SOP PDF ↗</a></article>
+        </div>
+        <div class="research-integrity"><span>ⓘ</span><p><strong>Research note:</strong> these are starting points, not a complete systematic review. Verify each paper's details, read the methods and limitations, and record your own conclusions in the Research Library. A short soil test alone cannot establish compliance with a biodegradability standard.</p></div>
+      </section>
+
+      <footer class="footer"><span>FLORACYCLE <i>•</i> student research workspace</span><span id="saveState">Saved in this browser</span><a href="README.md" target="_blank" rel="noopener">Setup guide ↗</a></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="edit-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header"><div><div class="eyebrow eyebrow-green" id="modalEyebrow">WORKSPACE ENTRY</div><h2 id="modalTitle">Add entry</h2></div><button class="close-button" id="closeModal" aria-label="Close form">×</button></div>
+      <p class="modal-hint" id="modalHint">Save notes and update them later.</p>
+      <form id="entryForm"><div class="form-grid" id="formFields"></div><div class="form-footer"><button type="button" class="button button-quiet" id="cancelModal">Cancel</button><button type="submit" class="button button-dark">Save entry <span>→</span></button></div></form>
+    </section>
+  </div>
+  <input type="file" id="importFile" accept="application/json,.json" class="hidden" aria-label="Choose a FLORACYCLE backup file">
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
